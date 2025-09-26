@@ -65,7 +65,7 @@ export default function Home() {
     try {
       // @ts-expect-error: A opção 'scale' é válida, mas ausente nas definições de tipo da biblioteca.
       const canvas = await html2canvas(imageRef.current, { scale: 3 });
-      if (navigator.share && navigator.canShare) {
+      if (navigator.share) {
         canvas.toBlob(async (blob) => {
           if (!blob) return;
           const file = new File([blob], 'apuracao-metas.png', { type: 'image/png' });
