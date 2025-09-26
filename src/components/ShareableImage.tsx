@@ -18,7 +18,7 @@ const ShareableImage: React.FC<ShareableImageProps> = React.forwardRef(({ region
   const font = `'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif`;
 
   return (
-    // @ts-ignore
+    // @ts-expect-error
     <div ref={ref} style={{ width: '800px', background: 'linear-gradient(135deg, #ffffff, #e6e9f0)', padding: '40px', fontFamily: font, color: '#343a40', border: '1px solid #dee2e6', borderRadius: '12px' }}>
       <div style={{ textAlign: 'center', borderBottom: '1px solid #dee2e6', paddingBottom: '20px', marginBottom: '20px' }}>
         <h1 style={{ fontSize: '48px', margin: 0, color: '#212529', fontWeight: 700 }}>Meta Comum Brasil</h1>

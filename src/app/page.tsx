@@ -20,7 +20,7 @@ const initialRegions: Omit<RegionData, 'goal'>[] = [
 const defaultNationalGoal = 1200000;
 
 // Função auxiliar para carregar do localStorage de forma segura no cliente
-const loadFromLocalStorage = (key: string, defaultValue: any) => {
+const loadFromLocalStorage = <T,>(key: string, defaultValue: T): T => {
   if (typeof window === 'undefined') {
     return defaultValue;
   }
