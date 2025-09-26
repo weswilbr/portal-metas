@@ -63,6 +63,7 @@ export default function Home() {
     if (!imageRef.current) return;
     setIsSharing(true);
     try {
+      // @ts-expect-error: A opção 'scale' é válida, mas ausente nas definições de tipo da biblioteca.
       const canvas = await html2canvas(imageRef.current, { scale: 3 });
       if (navigator.share && navigator.canShare) {
         canvas.toBlob(async (blob) => {
